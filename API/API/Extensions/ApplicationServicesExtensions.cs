@@ -40,6 +40,8 @@ namespace API.Extensions
                 };
             });
 
+            services.AddCors();
+
             return services;
         }
     }

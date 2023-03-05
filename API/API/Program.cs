@@ -25,6 +25,11 @@ if (app.Environment.IsDevelopment())
 
 app.UseStaticFiles();
 
+app.UseCors(opt =>
+{
+    opt.WithOrigins("https://localhost:4200").AllowAnyMethod().AllowAnyHeader();
+});
+
 app.UseAuthorization();
 
 app.MapControllers();
